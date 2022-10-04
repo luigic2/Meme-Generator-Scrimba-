@@ -59,14 +59,32 @@ main {
     border: none;
     cursor: pointer;
 }
+#meme__div{
+    background-image: url('{src={memeImage.randomImage}');
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+ background-repeat:no-repeat;
+ background-size: contain;
+ background-position-x: center;
+ background-position-y: center;
+}
 
 .meme--image {
     max-width: 100%;
     border-radius: 3px;
+    max-height: 100%;
+    
+   
 }
-
+.meme__text__top{ top:3rem }
+.meme__text__bottom{top:18rem}
 
 .meme__text{
+    font-size: 24px;
+    font-weight: 900;
     position: relative;
+    color: WHITE;
+      text-shadow: 0px 0px 5px red;
     text-align: center;
 }

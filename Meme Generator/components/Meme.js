@@ -64,10 +64,10 @@ export default function Meme() {
                     Get a new meme image 🖼
                 </button>
             </div>
-            <div className="meme__div">
+            <div src={memeImage.randomImage} style={{backgroundImage: `url(${memeImage.randomImage})`}} id="meme__div">
                 <p className="meme__text meme__text__top">{memeImage.topText}</p>
                 <p className="meme__text meme__text__bottom">{memeImage.bottomText}</p>
-                <img src={memeImage.randomImage} className="meme--image" />
+               
             </div>
         </main>
     )
