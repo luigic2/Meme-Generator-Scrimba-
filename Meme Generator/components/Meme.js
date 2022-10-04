@@ -2,22 +2,7 @@ import React from "react"
 import memesData from "../memesData.js"
 
 export default function Meme() {
-    /**
-     * Challenge: Update our state to save the meme-related
-     * data as an object called `meme`. It should have the
-     * following 3 properties:
-     * topText, bottomText, randomImage.
-     * 
-     * The 2 text states can default to empty strings for now,
-     * amd randomImage should default to "http://i.imgflip.com/1bij.jpg"
-     * 
-     * Next, create a new state variable called `allMemeImages`
-     * which will default to `memesData`, which we imported above
-     * 
-     * Lastly, update the `getMemeImage` function and the markup 
-     * to reflect our newly reformed state object and array in the
-     * correct way.
-     */
+
 
     const [memeImage, setMemeImage] = React.useState({
         topText: "Texto de Cima",
@@ -34,7 +19,7 @@ export default function Meme() {
         const memesArray = memesData.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         setMemeImage(x => ({
-            
+
             ...x,
             randomImage: memesArray[randomNumber].url
         }))
@@ -44,14 +29,14 @@ export default function Meme() {
         console.log(event.target.value)
         setMemeImage(x => ({
             ...x,
-            topText:event.target.value
+            topText: event.target.value
         }))
     }
-     const bottomText1Change = event => {
+    const bottomText1Change = event => {
         console.log(event.target.value)
-          setMemeImage(x => ({
+        setMemeImage(x => ({
             ...x,
-            bottomText:event.target.value
+            bottomText: event.target.value
         }))
     }
 
